@@ -1,0 +1,79 @@
+//2d
+@mixin rotate($angle){
+  @if $Opera {
+    -o-transform: rotate(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotate(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotate(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotate(#{$angle}deg);
+  }
+  transform: rotate(#{$angle}deg);
+}
+
+//3d
+@mixin rotate3d($x,$y,$z,$angle){
+  @if $Opera {
+    -o-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  transform: rotate3d($x,$y,$z,#{$angle}deg);
+}
+
+@mixin rotateX($angle){
+  @if $Opera {
+    -o-transform: rotateX(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateX(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateX(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateX(#{$angle}deg);
+  }
+  transform: rotateX(#{$angle}deg);
+}
+@mixin rotateY($angle){
+  @if $Opera {
+    -o-transform: rotateY(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateY(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateY(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateY(#{$angle}deg);
+  }
+  transform: rotateY(#{$angle}deg);
+}
+@mixin rotateZ($angle){
+  @if $Opera {
+    -o-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateZ(#{$angle}deg);
+  }
+  transform: rotateZ(#{$angle}deg);
+}

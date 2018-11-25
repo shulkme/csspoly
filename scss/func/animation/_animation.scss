@@ -1,0 +1,116 @@
+@mixin animation($name:none,$duration:0,$timingFunction:ease,$delay:0,$iterationCount:1,$direction:normal){
+  @if $Opera {
+    -o-animation:$name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  @if $Mozilla {
+    -moz-animation:$name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  @if $Webkit {
+    -webkit-animation: $name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  animation: $name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+}
+
+@mixin animation-name($name:none){
+  @if $Opera {
+    -o-animation-name:$name;
+  }
+  @if $Mozilla {
+    -moz-animation-name:$name;
+  }
+  @if $Webkit {
+    -webkit-animation-name: $name;
+  }
+  animation-name: $name;
+}
+@mixin animation-duration($time:0){
+  @if $Opera {
+    -o-animation-duration:#{$time}s;
+  }
+  @if $Mozilla {
+    -moz-animation-duration:#{$time}s;
+  }
+  @if $Webkit {
+    -webkit-animation-duration: #{$time}s;
+  }
+  animation-duration: #{$time}s;
+}
+@mixin animation-timing-function($value:ease){
+  @if $Opera {
+    -o-animation-timing-function: $value;
+  }
+  @if $Mozilla {
+    -moz-animation-timing-function: $value;
+  }
+  @if $Webkit {
+    -webkit-animation-timing-function: $value;
+  }
+  animation-timing-function: $value;
+}
+@mixin animation-delay($time:0){
+  @if $Opera {
+    -o-animation-delay:#{$time}s;
+  }
+  @if $Mozilla {
+    -moz-animation-delay:#{$time}s;
+  }
+  @if $Webkit {
+    -webkit-animation-delay: #{$time}s;
+  }
+  animation-delay: #{$time}s;
+}
+
+@mixin animation-iteration-count($n:1){
+  @if $Opera {
+    -o-animation-iteration-count:$n;
+  }
+  @if $Mozilla {
+    -moz-animation-iteration-count:$n;
+  }
+  @if $Webkit {
+    -webkit-animation-iteration-count:$n;
+  }
+  animation-iteration-count: $n;
+}
+
+@mixin animation-direction($state:normal){
+  @if $Opera {
+    -o-animation-direction:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-direction:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-direction:$state;
+  }
+  animation-direction: $state;
+}
+
+@mixin animation-play-state($state:running){
+  @if $Opera {
+    -o-animation-play-state:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-play-state:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-play-state:$state;
+  }
+  animation-play-state: $state;
+}
+
+@mixin animation-fill-mode($state:none){
+  @if $Opera {
+    -o-animation-fill-mode:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-fill-mode:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-fill-mode:$state;
+  }
+  animation-fill-mode: $state;
+}
+
+
+

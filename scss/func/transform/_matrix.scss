@@ -1,0 +1,31 @@
+@mixin matrix($a,$b,$c,$d,$tx,$ty){
+  @if $Opera {
+    -o-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Microsoft {
+    -ms-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Mozilla {
+    -moz-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Webkit {
+    -webkit-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  transform: matrix($a,$b,$c,$d,$tx,$ty);
+}
+
+@mixin matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4){
+  @if $Opera {
+    -o-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Microsoft {
+    -ms-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Mozilla {
+    -moz-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Webkit {
+    -webkit-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+}

@@ -1,0 +1,46 @@
+@mixin transform-origin($x:50%,$y:50%,$z:0){
+  @if $Opera {
+    -o-transform-origin:$x,$y,$z;
+  }
+  @if $Microsoft {
+    -ms-transform-origin: $x,$y,$z;
+  }
+  @if $Mozilla {
+    -moz-transform-origin: $x,$y,$z;
+  }
+  @if $Webkit {
+    -webkit-transform-origin: $x,$y,$z;
+  }
+  transform-origin: $x,$y,$z;
+}
+
+@mixin transform-style($style:flat){
+ @if $Webkit {
+      -webkit-transform-style: $style;
+    }
+    transform-style: $style;
+}
+
+@mixin perspective($n:none){
+    @if $Webkit {
+      -webkit-perspective: $n;
+    }
+    perspective: $n;
+}
+@mixin perspective-origin($x:50%,$y:50%){
+  @if $Webkit {
+    -webkit-perspective-origin: $x $y;
+  }
+  perspective-origin: $x $y;
+}
+
+
+@mixin backface-visibility($state:visible){
+    @if $Mozilla {
+      -moz-backface-visibility: $state;
+    }
+    @if $Webkit {
+      -webkit-backface-visibility: $state;
+    }
+    backface-visibility: $state;
+}

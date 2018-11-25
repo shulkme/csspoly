@@ -1,0 +1,77 @@
+//2d
+@mixin scale($x,$y){
+  @if $Opera {
+    -o-transform: scale($x,$y);
+  }
+  @if $Microsoft {
+    -ms-transform: scale($x,$y);
+  }
+  @if $Mozilla {
+    -moz-transform: scale($x,$y);
+  }
+  @if $Webkit {
+    -webkit-transform: scale($x,$y);
+  }
+  transform: scale($x,$y);
+}
+@mixin scaleX($n){
+  @if $Opera {
+    -o-transform: scaleX($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleX($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleX($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleX($n);
+  }
+  transform: scaleX($n);
+}
+@mixin scaleY($n){
+  @if $Opera {
+    -o-transform: scaleY($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleY($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleY($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleY($n);
+  }
+  transform: scaleY($n);
+}
+@mixin scaleZ($n){
+  @if $Opera {
+    -o-transform: scaleZ($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleZ($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleZ($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleZ($n);
+  }
+  transform: scaleZ($n);
+}
+
+@mixin scale3d($x,$y,$z){
+  @if $Opera {
+    -o-transform: scale3d($x,$y,$z);
+  }
+  @if $Microsoft {
+    -ms-transform: scale3d($x,$y,$z);
+  }
+  @if $Mozilla {
+    -moz-transform: scale3d($x,$y,$z);
+  }
+  @if $Webkit {
+    -webkit-transform: scale3d($x,$y,$z);
+  }
+  transform: scale3d($x,$y,$z);
+}

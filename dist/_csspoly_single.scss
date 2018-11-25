@@ -1,0 +1,554 @@
+/*
+* csspoly : SCSS Extension Library Compatible with Mainstream Browser Engine.Single file version.
+* author : shulk
+* build : 2018/11/25
+* version: 1.0
+* github:
+ */
+
+/*
+* config
+* Choose a browser engine that requires compatibility
+* true:  It compiles browser-compatible prefixes.
+* false: Browser-compatible prefixes are not compiled.
+ */
+$Mozilla:   true; //Firefox
+$Webkit:    true; //chrome & safari
+$Opera:     true; //opera
+$Microsoft: true; //ie
+
+
+/*
+* transition
+* transition,transition-property,transition-duration,transition-timing-function,transition-delay
+ */
+@mixin transition($property:all,$duration:0,$timingFunction:ease,$delay:0){
+  @if $Opera {
+    -o-transition:$property #{$duration}s $timingFunction #{$delay}s;
+  }
+  @if $Mozilla {
+    -moz-transition:$property #{$duration}s $timingFunction #{$delay}s;
+  }
+  @if $Webkit {
+    -webkit-transition: $property #{$duration}s $timingFunction #{$delay}s;
+  }
+  transition: $property #{$duration}s $timingFunction #{$delay}s;
+}
+@mixin transition-property($property:all){
+  @if $Opera {
+    -o-transition-property:$property;
+  }
+  @if $Mozilla {
+    -moz-transition-property: $property;
+  }
+  @if $Webkit {
+    -webkit-transition-property: $property;
+  }
+  transition-property: $property;
+}
+@mixin transition-duration($duration:0){
+  @if $Opera {
+    -o-transition-duration:#{$duration}s;
+  }
+  @if $Mozilla {
+    -moz-transition-duration: #{$duration}s;
+  }
+  @if $Webkit {
+    -webkit-transition-duration: #{$duration}s;
+  }
+  transition-duration: #{$duration}s;
+}
+@mixin transition-timing-function($timingFunction:ease){
+  @if $Opera {
+    -o-transition-timing-function: $timingFunction;
+  }
+  @if $Mozilla {
+    -moz-transition-timing-function: $timingFunction;
+  }
+  @if $Webkit {
+    -webkit-transition-timing-function: $timingFunction;
+  }
+  transition-timing-function: $timingFunction;
+}
+@mixin transition-delay($delay:0){
+  @if $Opera {
+    -o-transition-delay:#{$delay}s;
+  }
+  @if $Mozilla {
+    -moz-transition-delay: #{$delay}s;
+  }
+  @if $Webkit {
+    -webkit-transition-delay: #{$delay}s;
+  }
+  transition-delay: #{$delay}s;
+}
+/*
+* transform
+ */
+//matrix & matrix3d
+@mixin matrix($a,$b,$c,$d,$tx,$ty){
+  @if $Opera {
+    -o-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Microsoft {
+    -ms-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Mozilla {
+    -moz-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  @if $Webkit {
+    -webkit-transform: matrix($a,$b,$c,$d,$tx,$ty);
+  }
+  transform: matrix($a,$b,$c,$d,$tx,$ty);
+}
+@mixin matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4){
+  @if $Opera {
+    -o-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Microsoft {
+    -ms-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Mozilla {
+    -moz-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  @if $Webkit {
+    -webkit-transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+  }
+  transform: matrix3d($a1,$b1,$c1,$d1,$a2,$b2,$c2,$d2,$a3,$b3,$c3,$d3,$a4,$b4,$c4,$d4);
+}
+//rotate & rotate3d &rotateX & rotateY & rotateZ
+@mixin rotate($angle){
+  @if $Opera {
+    -o-transform: rotate(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotate(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotate(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotate(#{$angle}deg);
+  }
+  transform: rotate(#{$angle}deg);
+}
+@mixin rotate3d($x,$y,$z,$angle){
+  @if $Opera {
+    -o-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotate3d($x,$y,$z,#{$angle}deg);
+  }
+  transform: rotate3d($x,$y,$z,#{$angle}deg);
+}
+@mixin rotateX($angle){
+  @if $Opera {
+    -o-transform: rotateX(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateX(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateX(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateX(#{$angle}deg);
+  }
+  transform: rotateX(#{$angle}deg);
+}
+@mixin rotateY($angle){
+  @if $Opera {
+    -o-transform: rotateY(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateY(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateY(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateY(#{$angle}deg);
+  }
+  transform: rotateY(#{$angle}deg);
+}
+@mixin rotateZ($angle){
+  @if $Opera {
+    -o-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: rotateZ(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: rotateZ(#{$angle}deg);
+  }
+  transform: rotateZ(#{$angle}deg);
+}
+//scale & scale3d & scaleX & scaleY &scaleZ
+@mixin scale($x,$y){
+  @if $Opera {
+    -o-transform: scale($x,$y);
+  }
+  @if $Microsoft {
+    -ms-transform: scale($x,$y);
+  }
+  @if $Mozilla {
+    -moz-transform: scale($x,$y);
+  }
+  @if $Webkit {
+    -webkit-transform: scale($x,$y);
+  }
+  transform: scale($x,$y);
+}
+@mixin scale3d($x,$y,$z){
+  @if $Opera {
+    -o-transform: scale3d($x,$y,$z);
+  }
+  @if $Microsoft {
+    -ms-transform: scale3d($x,$y,$z);
+  }
+  @if $Mozilla {
+    -moz-transform: scale3d($x,$y,$z);
+  }
+  @if $Webkit {
+    -webkit-transform: scale3d($x,$y,$z);
+  }
+  transform: scale3d($x,$y,$z);
+}
+@mixin scaleX($n){
+  @if $Opera {
+    -o-transform: scaleX($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleX($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleX($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleX($n);
+  }
+  transform: scaleX($n);
+}
+@mixin scaleY($n){
+  @if $Opera {
+    -o-transform: scaleY($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleY($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleY($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleY($n);
+  }
+  transform: scaleY($n);
+}
+@mixin scaleZ($n){
+  @if $Opera {
+    -o-transform: scaleZ($n);
+  }
+  @if $Microsoft {
+    -ms-transform: scaleZ($n);
+  }
+  @if $Mozilla {
+    -moz-transform: scaleZ($n);
+  }
+  @if $Webkit {
+    -webkit-transform: scaleZ($n);
+  }
+  transform: scaleZ($n);
+}
+//skew & skewX & skewY
+@mixin skew($xAngle,$yAngle){
+  @if $Opera {
+    -o-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+}
+@mixin skewX($angle){
+  @if $Opera {
+    -o-transform: skewX(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skewX(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skewX(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skewX(#{$angle}deg);
+  }
+  transform: skewX(#{$angle}deg);
+}
+@mixin skewY($angle){
+  @if $Opera {
+    -o-transform: skewY(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skewY(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skewY(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skewY(#{$angle}deg);
+  }
+  transform: skewY(#{$angle}deg);
+}
+//translate & translate3d & translateX & translateY & translateZ
+@mixin translate($x,$y){
+  @if $Opera {
+    -o-transform: translate($x,$y);
+  }
+  @if $Microsoft {
+    -ms-transform: translate($x,$y);
+  }
+  @if $Mozilla {
+    -moz-transform: translate($x,$y);
+  }
+  @if $Webkit {
+    -webkit-transform: translate($x,$y);
+  }
+  transform: translate($x,$y);
+}
+@mixin translate3d($x,$y,$z){
+  @if $Opera {
+    -o-transform: translate3d($x,$y,$z);
+  }
+  @if $Microsoft {
+    -ms-transform: translate3d($x,$y,$z);
+  }
+  @if $Mozilla {
+    -moz-transform: translate3d($x,$y,$z);
+  }
+  @if $Webkit {
+    -webkit-transform: translate3d($x,$y,$z);
+  }
+  transform: translate3d($x,$y,$z);
+}
+@mixin translateX($n){
+  @if $Opera {
+    -o-transform: translateX($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateX($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateX($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateX($n);
+  }
+  transform: translateX($n);
+}
+@mixin translateY($n){
+  @if $Opera {
+    -o-transform: translateY($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateY($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateY($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateY($n);
+  }
+  transform: translateY($n);
+}
+@mixin translateZ($n){
+  @if $Opera {
+    -o-transform: translateZ($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateZ($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateZ($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateZ($n);
+  }
+  transform: translateZ($n);
+}
+/*
+* extra
+* transform-origin,transform-style,perspective,perspective-origin,backface-visibility
+ */
+@mixin transform-origin($x:50%,$y:50%,$z:0){
+  @if $Opera {
+    -o-transform-origin:$x,$y,$z;
+  }
+  @if $Microsoft {
+    -ms-transform-origin: $x,$y,$z;
+  }
+  @if $Mozilla {
+    -moz-transform-origin: $x,$y,$z;
+  }
+  @if $Webkit {
+    -webkit-transform-origin: $x,$y,$z;
+  }
+  transform-origin: $x,$y,$z;
+}
+@mixin transform-style($style:flat){
+  @if $Webkit {
+    -webkit-transform-style: $style;
+  }
+  transform-style: $style;
+}
+@mixin perspective($n:none){
+  @if $Webkit {
+    -webkit-perspective: $n;
+  }
+  perspective: $n;
+}
+@mixin perspective-origin($x:50%,$y:50%){
+  @if $Webkit {
+    -webkit-perspective-origin: $x $y;
+  }
+  perspective-origin: $x $y;
+}
+@mixin backface-visibility($state:visible){
+  @if $Mozilla {
+    -moz-backface-visibility: $state;
+  }
+  @if $Webkit {
+    -webkit-backface-visibility: $state;
+  }
+  backface-visibility: $state;
+}
+/*
+* animation
+* animation,animation-name,animation-duration,animation-timing-function
+* animation-delay,animation-iteration-count,animation-direction,animation-play-state,animation-fill-mode
+ */
+@mixin animation($name:none,$duration:0,$timingFunction:ease,$delay:0,$iterationCount:1,$direction:normal){
+  @if $Opera {
+    -o-animation:$name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  @if $Mozilla {
+    -moz-animation:$name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  @if $Webkit {
+    -webkit-animation: $name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+  }
+  animation: $name #{$duration}s $timingFunction #{$delay}s $iterationCount $direction;
+}
+@mixin animation-name($name:none){
+  @if $Opera {
+    -o-animation-name:$name;
+  }
+  @if $Mozilla {
+    -moz-animation-name:$name;
+  }
+  @if $Webkit {
+    -webkit-animation-name: $name;
+  }
+  animation-name: $name;
+}
+@mixin animation-duration($time:0){
+  @if $Opera {
+    -o-animation-duration:#{$time}s;
+  }
+  @if $Mozilla {
+    -moz-animation-duration:#{$time}s;
+  }
+  @if $Webkit {
+    -webkit-animation-duration: #{$time}s;
+  }
+  animation-duration: #{$time}s;
+}
+@mixin animation-timing-function($value:ease){
+  @if $Opera {
+    -o-animation-timing-function: $value;
+  }
+  @if $Mozilla {
+    -moz-animation-timing-function: $value;
+  }
+  @if $Webkit {
+    -webkit-animation-timing-function: $value;
+  }
+  animation-timing-function: $value;
+}
+@mixin animation-delay($time:0){
+  @if $Opera {
+    -o-animation-delay:#{$time}s;
+  }
+  @if $Mozilla {
+    -moz-animation-delay:#{$time}s;
+  }
+  @if $Webkit {
+    -webkit-animation-delay: #{$time}s;
+  }
+  animation-delay: #{$time}s;
+}
+@mixin animation-iteration-count($n:1){
+  @if $Opera {
+    -o-animation-iteration-count:$n;
+  }
+  @if $Mozilla {
+    -moz-animation-iteration-count:$n;
+  }
+  @if $Webkit {
+    -webkit-animation-iteration-count:$n;
+  }
+  animation-iteration-count: $n;
+}
+@mixin animation-direction($state:normal){
+  @if $Opera {
+    -o-animation-direction:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-direction:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-direction:$state;
+  }
+  animation-direction: $state;
+}
+@mixin animation-play-state($state:running){
+  @if $Opera {
+    -o-animation-play-state:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-play-state:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-play-state:$state;
+  }
+  animation-play-state: $state;
+}
+@mixin animation-fill-mode($state:none){
+  @if $Opera {
+    -o-animation-fill-mode:$state;
+  }
+  @if $Mozilla {
+    -moz-animation-fill-mode:$state;
+  }
+  @if $Webkit {
+    -webkit-animation-fill-mode:$state;
+  }
+  animation-fill-mode: $state;
+}
+
+
+

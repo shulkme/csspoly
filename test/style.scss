@@ -1,0 +1,8 @@
+@import "../scss/csspoly";
+.t-translate{
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: #ddd;
+  @include translate(10px,20px);
+}

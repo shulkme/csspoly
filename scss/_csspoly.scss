@@ -1,0 +1,32 @@
+/*
+* csspoly : SCSS Extension Library Compatible with Mainstream Browser Engine
+* author : shulk
+* build : 2018/11/25
+* version: 1.0
+* github:
+ */
+
+/*
+* config
+* Choose a browser engine that requires compatibility
+* true:  It compiles browser-compatible prefixes.
+* false: Browser-compatible prefixes are not compiled.
+ */
+$Mozilla:   true; //Firefox
+$Webkit:    true; //chrome & safari
+$Opera:     true; //opera
+$Microsoft: true; //ie
+
+/*
+* import
+* Common CSS3 methods and functions are provided here,
+* and corresponding functions can be referenced as needed.
+ */
+@import "func/transform/translate"; // translate
+@import "func/transform/rotate"; // rotate
+@import "func/transform/scale"; // scale
+@import "func/transform/skew"; // skew
+@import "func/transform/matrix"; // matrix
+@import "func/extra/extra"; // extra
+@import "func/transition/transition"; // transition
+@import "func/animation/animation"; // transition

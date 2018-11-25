@@ -1,0 +1,46 @@
+@mixin skew($xAngle,$yAngle){
+  @if $Opera {
+    -o-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+  }
+  transform: skew(#{$xAngle}deg,#{$yAngle}deg);
+}
+
+@mixin skewX($angle){
+  @if $Opera {
+    -o-transform: skewX(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skewX(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skewX(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skewX(#{$angle}deg);
+  }
+  transform: skewX(#{$angle}deg);
+}
+@mixin skewY($angle){
+  @if $Opera {
+    -o-transform: skewY(#{$angle}deg);
+  }
+  @if $Microsoft {
+    -ms-transform: skewY(#{$angle}deg);
+  }
+  @if $Mozilla {
+    -moz-transform: skewY(#{$angle}deg);
+  }
+  @if $Webkit {
+    -webkit-transform: skewY(#{$angle}deg);
+  }
+  transform: skewY(#{$angle}deg);
+}

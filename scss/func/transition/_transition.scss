@@ -1,0 +1,64 @@
+@mixin transition($property:all,$duration:0,$timingFunction:ease,$delay:0){
+  @if $Opera {
+    -o-transition:$property #{$duration}s $timingFunction #{$delay}s;
+  }
+  @if $Mozilla {
+    -moz-transition:$property #{$duration}s $timingFunction #{$delay}s;
+  }
+  @if $Webkit {
+    -webkit-transition: $property #{$duration}s $timingFunction #{$delay}s;
+  }
+  transition: $property #{$duration}s $timingFunction #{$delay}s;
+}
+
+@mixin transition-property($property:all){
+  @if $Opera {
+    -o-transition-property:$property;
+  }
+  @if $Mozilla {
+    -moz-transition-property: $property;
+  }
+  @if $Webkit {
+    -webkit-transition-property: $property;
+  }
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration:0){
+  @if $Opera {
+    -o-transition-duration:#{$duration}s;
+  }
+  @if $Mozilla {
+    -moz-transition-duration: #{$duration}s;
+  }
+  @if $Webkit {
+    -webkit-transition-duration: #{$duration}s;
+  }
+  transition-duration: #{$duration}s;
+}
+
+@mixin transition-timing-function($timingFunction:ease){
+  @if $Opera {
+    -o-transition-timing-function: $timingFunction;
+  }
+  @if $Mozilla {
+    -moz-transition-timing-function: $timingFunction;
+  }
+  @if $Webkit {
+    -webkit-transition-timing-function: $timingFunction;
+  }
+  transition-timing-function: $timingFunction;
+}
+
+@mixin transition-delay($delay:0){
+  @if $Opera {
+    -o-transition-delay:#{$delay}s;
+  }
+  @if $Mozilla {
+    -moz-transition-delay: #{$delay}s;
+  }
+  @if $Webkit {
+    -webkit-transition-delay: #{$delay}s;
+  }
+  transition-delay: #{$delay}s;
+}

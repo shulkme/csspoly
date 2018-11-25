@@ -1,0 +1,30 @@
+/*
+* csspoly : SCSS Extension Library Compatible with Mainstream Browser Engine
+* author : shulk
+* build : 2018/11/25
+* version: 1.0
+* github:
+ */
+/*
+* config
+* Choose a browser engine that requires compatibility
+* true:  It compiles browser-compatible prefixes.
+* false: Browser-compatible prefixes are not compiled.
+ */
+/*
+* import
+* Common CSS3 methods and functions are provided here,
+* and corresponding functions can be referenced as needed.
+ */
+.t-translate {
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: #ddd;
+  -o-transform: translate(10px, 20px);
+  -ms-transform: translate(10px, 20px);
+  -moz-transform: translate(10px, 20px);
+  -webkit-transform: translate(10px, 20px);
+  transform: translate(10px, 20px); }
+
+/*# sourceMappingURL=style.css.map */

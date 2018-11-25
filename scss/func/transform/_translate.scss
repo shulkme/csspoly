@@ -1,0 +1,76 @@
+@mixin translate($x,$y){
+  @if $Opera {
+    -o-transform: translate($x,$y);
+  }
+  @if $Microsoft {
+    -ms-transform: translate($x,$y);
+  }
+  @if $Mozilla {
+    -moz-transform: translate($x,$y);
+  }
+  @if $Webkit {
+    -webkit-transform: translate($x,$y);
+  }
+  transform: translate($x,$y);
+}
+@mixin translateX($n){
+  @if $Opera {
+    -o-transform: translateX($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateX($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateX($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateX($n);
+  }
+  transform: translateX($n);
+}
+@mixin translateY($n){
+  @if $Opera {
+    -o-transform: translateY($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateY($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateY($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateY($n);
+  }
+  transform: translateY($n);
+}
+@mixin translateZ($n){
+  @if $Opera {
+    -o-transform: translateZ($n);
+  }
+  @if $Microsoft {
+    -ms-transform: translateZ($n);
+  }
+  @if $Mozilla {
+    -moz-transform: translateZ($n);
+  }
+  @if $Webkit {
+    -webkit-transform: translateZ($n);
+  }
+  transform: translateZ($n);
+}
+
+@mixin translate3d($x,$y,$z){
+  @if $Opera {
+    -o-transform: translate3d($x,$y,$z);
+  }
+  @if $Microsoft {
+    -ms-transform: translate3d($x,$y,$z);
+  }
+  @if $Mozilla {
+    -moz-transform: translate3d($x,$y,$z);
+  }
+  @if $Webkit {
+    -webkit-transform: translate3d($x,$y,$z);
+  }
+  transform: translate3d($x,$y,$z);
+}
